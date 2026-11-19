@@ -35,7 +35,7 @@ def makemap(args=None):
     )
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     if args.write:
         if not args.overwrite and os.path.exists(doppler.acfg(args.config)):

@@ -33,7 +33,7 @@ def mol2dopp(args=None):
     )
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
     if args.nsub < 0 or args.nsub > 100:
         print('ERROR: the nsub parameter should range from 1 to 100')
         exit(1)

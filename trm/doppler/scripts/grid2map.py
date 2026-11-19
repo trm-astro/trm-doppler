@@ -18,7 +18,7 @@ def grid2map(args=None):
     parser.add_argument('map',   help='output map')
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     # load grid and data
     grid = doppler.Grid.rfits(doppler.afits(args.grid))

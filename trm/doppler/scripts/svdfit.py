@@ -27,7 +27,7 @@ def svdfit(args=None):
                         default=11, help='spectrum sub-division factor')
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     # load grid and data
     grid = doppler.Grid.rfits(doppler.afits(args.igrid))

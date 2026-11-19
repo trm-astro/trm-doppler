@@ -27,7 +27,7 @@ def comdat(args=None):
     )
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     # load map and data
     dmap  = doppler.Map.rfits(doppler.afits(args.map))

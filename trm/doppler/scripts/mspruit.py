@@ -36,7 +36,7 @@ def mspruit(args=None):
     )
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     with open(args.dop) as fin:
         nph, nvp, nv, w0, gamma = fin.readline().split()

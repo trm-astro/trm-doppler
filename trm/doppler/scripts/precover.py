@@ -46,7 +46,7 @@ def precover(args=None):
     parser.add_argument('-n', dest='ntdiv', type=int,
                         default=11, help='spectrum sub-division factor')
 
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     model  = doppler.Map.rfits(doppler.afits(args.model))
     if len(model.data) != 1:

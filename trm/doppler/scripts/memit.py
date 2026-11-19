@@ -22,7 +22,7 @@ def memit(args=None):
                         default=1.e-4, help='test limit for stopping iterations')
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     # load map and data
     dmap = doppler.Map.rfits(doppler.afits(args.imap))

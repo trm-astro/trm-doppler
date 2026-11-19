@@ -27,7 +27,7 @@ def optgam(args=None):
         help='initial step size for bracketing the minimum [km/s]'
     )
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     # load map and data
     dmap = doppler.Map.rfits(doppler.afits(args.map))

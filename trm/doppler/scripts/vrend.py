@@ -30,7 +30,7 @@ def vrend(args=None):
     )
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     dmap = doppler.Map.rfits(doppler.afits(args.map))
     img = dmap.data[args.nimage-1]

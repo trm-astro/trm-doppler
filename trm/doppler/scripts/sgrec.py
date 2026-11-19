@@ -36,7 +36,7 @@ def sgrec(args=None):
     )
     parser.add_argument('ofile', help='ASCII file for output')
 
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     model  = doppler.Map.rfits(doppler.afits(args.model))
     if len(model.data) != 1:

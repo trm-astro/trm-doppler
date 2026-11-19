@@ -36,7 +36,7 @@ def psearch(args=None):
                         help='spectrum sub-division factor for finite exposures')
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     # a few checks
     if args.flow <= 0 or args.fhigh <= args.flow:

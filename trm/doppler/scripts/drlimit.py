@@ -22,7 +22,7 @@ def drlimit(args=None):
     parser.add_argument('outmap',  help='name of output map')
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     # load map
     imap  = doppler.Map.rfits(doppler.afits(args.inmap))

@@ -19,7 +19,7 @@ def comdef(args=None):
     parser.add_argument('dout',  help='default output file')
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     # load map
     dmap  = doppler.Map.rfits(doppler.afits(args.map))

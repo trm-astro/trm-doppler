@@ -28,7 +28,7 @@ def trtest(args=None):
     )
 
     # OK, done with arguments.
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     if args.ntrial < 1:
         print('You must carry out at least one trial.')
