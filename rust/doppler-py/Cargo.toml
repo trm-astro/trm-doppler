@@ -1,0 +1,17 @@
+[package]
+name = "doppler-py"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "PyO3 bindings for doppler-core: numerical core of trm.doppler"
+
+[lib]
+name = "_doppler_rs"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+doppler-core = { path = "../doppler-core" }
+doppler-mem = { path = "../doppler-mem" }
+pyo3 = { version = "0.22", features = ["extension-module"] }
+numpy = "0.22"

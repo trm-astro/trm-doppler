@@ -1,0 +1,11 @@
+[package]
+name = "memsys"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "TEMPORARY local stand-in for the trm-astro/rust-mem `memsys` crate, pending its MemTransform-based library API; see rust/memsys-stub/src/lib.rs"
+publish = false
+
+[dependencies]
+ndarray = "0.16"

@@ -1,0 +1,16 @@
+[package]
+name = "doppler-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Numerical core of trm.doppler: image<->data projection routines for Doppler tomography"
+
+[dependencies]
+rustfft = "6"
+realfft = "3"
+rayon = "1"
+thiserror = "1"
+
+[dev-dependencies]
+approx = "0.5"

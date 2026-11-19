@@ -1,0 +1,19 @@
+[package]
+name = "doppler-mem"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "MEM iteration driver bridging doppler-core's op/tr to the memsys crate's MemTransform API"
+
+[dependencies]
+doppler-core = { path = "../doppler-core" }
+# TODO: once https://github.com/trm-astro/rust-mem publishes the agreed
+# MemGblst/MemTransform/memprm library API, replace this path dependency
+# with, e.g.:
+#   memsys = { git = "https://github.com/trm-astro/rust-mem", branch = "main" }
+# No other code in this crate should need to change -- see
+# ../memsys-stub/src/lib.rs for why this is a drop-in placeholder.
+memsys = { path = "../memsys-stub" }
+ndarray = "0.16"
+thiserror = "1"
