@@ -2,7 +2,8 @@
 
 import argparse
 import numpy as np
-from trm import doppler, pgram
+from trm import doppler
+from astropy.timeseries import LombScargle
 
 def vrrec(args=None):
     usage = \
@@ -102,7 +103,8 @@ def vrrec(args=None):
                 times = np.array(times)
 
                 # compute periodogram on same set of frequencies as
-                p = pgram.wmls(times, ratios, rerrs, fs)
+                ls = LombScargle(times, ratios, rerrs)
+                p = ls.power(fs)
 
                 # output best frequency
                 fout.write(str(fs[p.argmax()]) + '\n')
