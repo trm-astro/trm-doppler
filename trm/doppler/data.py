@@ -310,7 +310,7 @@ if __name__ == '__main__':
     wave   = np.linspace(490.,510.,shape[1])
     time   = np.linspace(50000.,50000.1,shape[0])
     expose = 0.001*np.ones_like(time)
-    nsub   = np.ones_like(time,dtype=np.int)
+    nsub   = np.ones_like(time,dtype=np.int32)
     fwhm   = 2.2
 
     # manipulate the fluxes to be vaguely interesting

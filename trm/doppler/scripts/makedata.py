@@ -207,7 +207,7 @@ nsub   = 3
 
             etime  = (time[-1]-time[0])/(nspec-1)
             expose = np.empty_like(time); expose.fill(etime)
-            nsub   = np.empty_like(time,dtype=np.int)
+            nsub   = np.empty_like(time,dtype=np.int32)
             nsub.fill(nsb)
 
             # create & store the Spectra
